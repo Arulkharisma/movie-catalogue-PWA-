@@ -1,6 +1,7 @@
 import 'regenerator-runtime';
 import '../styles/style.css';
 import '../styles/responsive.css';
+import { inject } from '@vercel/analytics';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 import WebSocketInitiator from './utils/websocket-initiator';
@@ -28,3 +29,5 @@ window.addEventListener('load', async () => {
     unsubscribeButton: document.querySelector('#unsubscribePushNotification'),
   });
 });
+
+inject();
